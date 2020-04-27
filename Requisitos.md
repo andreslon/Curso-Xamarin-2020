@@ -1,10 +1,6 @@
-Xamarin se basa en .NET Framework. 
+# Requisitos para Xamarin
 
-Permite crear aplicaciones que se ejecutan fácilmente en múltiples plataformas. 
-
-## Requisitos
-
-### Windows
+## Windows
 
 - Mínimo 2 GB de RAM
 - Windows 7 o superior (se recomienda Windows 8-10)
@@ -19,14 +15,17 @@ Para instalar Xamarin para Visual Studio 2019/Visual Studio 2017, deberá habili
 
 - Si ya tiene instalado Visual Studio, puede modificar la opción **Desarrollo móvil con .Net** volviendo a ejecutar el instalador de Visual Studio y seleccionando la opción "Modificar".
 
----
+![Windows](vs2019_xamarin_workload.png)
 
-### Mac
+## Mac
 - Mac con OS X Yosemite (10.10) o superior
 - IDE Xcode de Apple (7+) y SDK de iOS
 - Visual Studio para Mac con Xamarin instalado.
 
-[Descargar](https://www.visualstudio.com/downloads/)
+[Descargar](https://www.visualstudio.com/downloads)
 
 El instalador de Visual Studio para Mac inspecciona su sistema y verifica qué componentes están instalados y cuáles deben actualizarse. 
+
 Para asegurarse de que Xamarin esté instalado, deberá ejecutar el instalador de VS para Mac y verificar si las opciones de **Android** e **iOS** están habilitadas.
+
+![Mac](vsmac_xamarin.png) 
