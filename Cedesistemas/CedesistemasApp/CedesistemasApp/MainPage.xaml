@@ -6,29 +6,5 @@
              mc:Ignorable="d"
              x:Class="CedesistemasApp.MainPage">
 
-    <Grid   >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="2*" />
-        </Grid.RowDefinitions>
 
-        <Image Source="mask.png" Grid.Row="1" Grid.Column="1"  />
-
-
-        <Entry Placeholder="Usuario"  Grid.Row="3" Grid.Column="1"  />
-
-        <Entry  Placeholder="Password" IsPassword="True"   Grid.Row="5" Grid.Column="1"  />
-
-
-    </Grid>
 </ContentPage>

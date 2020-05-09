@@ -6,6 +6,11 @@
              mc:Ignorable="d"
              x:Class="CedesistemasApp.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            
+            <Color x:Key="azul_color">#4468d5</Color>
+            <Color x:Key="gris_claro_color">#fdfdfd</Color>
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
