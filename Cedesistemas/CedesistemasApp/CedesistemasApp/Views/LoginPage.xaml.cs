@@ -20,8 +20,8 @@ namespace CedesistemasApp.Views
             txt_email.Text = "admin@admin.com";
             txt_password.Text = "admin";
 #endif
-        } 
-        private void btn_login_Clicked(object sender, EventArgs e)
+        }
+        async private void btn_login_Clicked(object sender, EventArgs e)
         {
             string email = txt_email.Text;
             string password = txt_password.Text;
@@ -29,9 +29,11 @@ namespace CedesistemasApp.Views
             if (email == "admin@admin.com" && password == "admin")
             {
                 //Autenticación Correcta
+                await this.Navigation.PushModalAsync(new HomePage());
             }
-            else {
-                this.DisplayAlert("Campos Incorrectos", "Email o password incorrecto", "Aceptar");
+            else
+            {
+                await this.DisplayAlert("Campos Incorrectos", "Email o password incorrecto", "Aceptar");
             }
         }
     }
