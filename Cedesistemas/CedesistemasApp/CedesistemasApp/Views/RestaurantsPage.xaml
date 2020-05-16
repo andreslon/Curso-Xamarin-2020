@@ -8,25 +8,27 @@
              x:Class="CedesistemasApp.Views.RestaurantsPage">
     <Grid>
         <ListView x:Name="grd_restaurants"
-                  ItemSelected="grd_restaurants_ItemSelected"
+                  ItemSelected="grd_restaurants_ItemSelected" 
                   ItemsSource="{Binding Restaurantes}" HasUnevenRows="True"
-                  SeparatorVisibility="None"
+                  SeparatorVisibility="None" 
                   CachingStrategy="RecycleElement">
             <ListView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate  >
                     <ViewCell>
-                        <Frame HasShadow="False" 
-                               BorderColor="LightGray" Margin="7" Padding="0">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding Imagen}" HeightRequest="100" WidthRequest="130" Aspect="AspectFill"/>
-                                <StackLayout>
-                                    <Label Text="{Binding Nombre}" FontSize="Medium" />
-                                    <Label Text="{Binding Direccion}" FontSize="Micro" TextColor="Gray"/>
-                                    <Label Text="{Binding Telefono}" FontSize="Small"/>
+                        <Grid  BackgroundColor="{StaticResource gris_claro_color}">
+                            <Frame Margin="7" Padding="0" >
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Imagen}" HeightRequest="100" WidthRequest="130" Aspect="AspectFill"/>
+                                    <StackLayout Padding="2">
+                                        <Label Text="{Binding Nombre}" FontSize="Large" TextColor="#1e1e1e"/>
+                                        <Label Text="{Binding Direccion}" FontSize="Small" TextColor="Gray" LineBreakMode="TailTruncation"/>
+                                        <Label Text="{Binding Telefono}" FontSize="Small"/>
+                                    </StackLayout>
+
                                 </StackLayout>
-                                
-                            </StackLayout>
-                        </Frame>
+                            </Frame>
+                        </Grid>
+                       
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
