@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Cedesistemas.Api.Data;
 using Cedesistemas.Api.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc; 
+using Microsoft.AspNetCore.Mvc;
 namespace Cedesistemas.Api.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController] 
+    [ApiController]
     public class InstallController : ControllerBase
     {
         public CedesistemasDbContext CedesistemasDbContext { get; set; }
@@ -27,6 +27,7 @@ namespace Cedesistemas.Api.Controllers
 
         private async Task InstallSeed()
         {
+            var random = new Random();
             var rest = new List<Restaurante>
               {
                 new Restaurante
@@ -37,7 +38,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "La Pampa Burger & Ribs",
                     SitioWeb = "http://www.lapampa.co/",
-                    Telefono = "+57 4 3660706"
+                    Telefono = "+57 4 3660706",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -47,7 +49,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Betty's Bowls",
                     SitioWeb = "http://bettysbowls.com/en",
-                    Telefono = "+57 319 4458527"
+                    Telefono = "+57 319 4458527",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -57,7 +60,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Pokawa",
                     SitioWeb = "http://www.pokawa.co/",
-                    Telefono = "+57 313 4948365"
+                    Telefono = "+57 313 4948365",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -67,7 +71,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Tika Dogs Gourmet",
                     SitioWeb = "http://www.facebook.com/tikadogsgourmet/",
-                    Telefono = "+57 314 8943337"
+                    Telefono = "+57 314 8943337",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -77,7 +82,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Malanga del Trópico",
                     SitioWeb = "http://www.malangadeltropico.com/",
-                    Telefono = "+57 311 7823084"
+                    Telefono = "+57 311 7823084",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -87,7 +93,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Toro Restaurante",
                     SitioWeb = "http://www.facebook.com/ToroRestauranteMedellin",
-                    Telefono = "+57 300 7603091"
+                    Telefono = "+57 300 7603091",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -97,7 +104,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Bárbaro Cocina Primitiva Sede Poblado",
                     SitioWeb = "http://www.barbarococinaprimitiva.com/",
-                    Telefono = "+57 4 4799447"
+                    Telefono = "+57 4 4799447",
+                    Calificacion=random.Next(0,5)
                 },
                 new Restaurante
                 {
@@ -107,7 +115,8 @@ namespace Cedesistemas.Api.Controllers
                     Longitud = -75.591399,
                     Nombre = "Takout",
                     SitioWeb = "https://www.facebook.com/TakoutColombia/",
-                    Telefono = "+57 4 2500203"
+                    Telefono = "+57 4 2500203",
+                    Calificacion=random.Next(0,5)
                 }
               };
             await CedesistemasDbContext.Restaurante.AddRangeAsync(rest);
@@ -115,7 +124,7 @@ namespace Cedesistemas.Api.Controllers
             var prods = new List<Producto>();
 
             foreach (var r in rest)
-            { 
+            {
 
                 prods.Add(new Producto
                 {
