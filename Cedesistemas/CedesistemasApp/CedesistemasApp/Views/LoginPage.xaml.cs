@@ -29,7 +29,7 @@ namespace CedesistemasApp.Views
             if (email == "admin@admin.com" && password == "admin")
             {
                 //Autenticación Correcta
-                await this.Navigation.PushModalAsync(new HomePage());
+                App.Current.MainPage = new NavigationPage(new HomePage());
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿using CedesistemasApp.ViewModels;
+﻿using CedesistemasApp.Models;
+using CedesistemasApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,15 @@ namespace CedesistemasApp.Views
         {
             InitializeComponent();
             BindingContext = new RestaurantsPageViewModel();
+        }
+
+        async private void grd_restaurants_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as RestaurantModel;
+            if (item == null)
+                return; 
+            await Navigation.PushAsync(new RestaurantDetailPage(new RestaurantDetailPageViewModel(item)));
+            grd_restaurants.SelectedItem = null;
         }
     }
 }

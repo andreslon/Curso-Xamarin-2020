@@ -7,7 +7,10 @@
              BackgroundColor="{StaticResource gris_claro_color}"
              x:Class="CedesistemasApp.Views.RestaurantsPage">
     <Grid>
-        <ListView ItemsSource="{Binding Restaurantes}" HasUnevenRows="True"
+        <ListView x:Name="grd_restaurants"
+                  ItemSelected="grd_restaurants_ItemSelected"
+                  ItemsSource="{Binding Restaurantes}" HasUnevenRows="True"
+                  SeparatorVisibility="None"
                   CachingStrategy="RecycleElement">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -15,7 +18,7 @@
                         <Frame HasShadow="False" 
                                BorderColor="LightGray" Margin="7" Padding="0">
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding Imagen}" HeightRequest="100" WidthRequest="130"/>
+                                <Image Source="{Binding Imagen}" HeightRequest="100" WidthRequest="130" Aspect="AspectFill"/>
                                 <StackLayout>
                                     <Label Text="{Binding Nombre}" FontSize="Medium" />
                                     <Label Text="{Binding Direccion}" FontSize="Micro" TextColor="Gray"/>
