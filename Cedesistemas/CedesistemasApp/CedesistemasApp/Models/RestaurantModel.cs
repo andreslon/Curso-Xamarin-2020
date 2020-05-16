@@ -14,5 +14,6 @@ namespace CedesistemasApp.Models
         public string SitioWeb { get; set; }
         public double Latitud { get; set; }
         public double Longitud { get; set; }
+        public int Calificacion { get; set; }
     }
 }

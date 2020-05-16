@@ -154,4 +154,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\home%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bad%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bad%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\good.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\good%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\good%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\neutro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\neutro%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\neutro%403x.png" />
+  </ItemGroup>
 </Project>

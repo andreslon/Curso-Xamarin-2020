@@ -7,9 +7,8 @@ using System.Text;
 
 namespace CedesistemasApp.ViewModels
 {
-    public class RestaurantsPageViewModel
-    {
-        public ObservableCollection<RestaurantModel> Restaurantes { get; set; }
+    public class RestaurantsPageViewModel : BaseViewModel
+    {   public ObservableCollection<RestaurantModel> Restaurantes { get; set; }
 
         public RestaurantsPageViewModel()
         {
@@ -18,10 +17,12 @@ namespace CedesistemasApp.ViewModels
         }
         async private void LoadRestaurants()
         {
+            IsRefreshing = true;
             foreach (var item in await new RestaurantRepository().GetRestaurants())
             {
                 Restaurantes.Add(item);
             }
+            IsRefreshing = false;
         }
     }
 }

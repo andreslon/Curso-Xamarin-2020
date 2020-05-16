@@ -8,12 +8,13 @@
              x:Class="CedesistemasApp.Views.RestaurantsPage">
     <Grid>
         <ListView x:Name="grd_restaurants"
+                  IsRefreshing="{Binding IsRefreshing}"
                   ItemSelected="grd_restaurants_ItemSelected" 
                   ItemsSource="{Binding Restaurantes}" HasUnevenRows="True"
                   SeparatorVisibility="None" 
                   CachingStrategy="RecycleElement">
             <ListView.ItemTemplate>
-                <DataTemplate  >
+                <DataTemplate>
                     <ViewCell>
                         <Grid  BackgroundColor="{StaticResource gris_claro_color}">
                             <Frame Margin="7" Padding="0" >
@@ -28,7 +29,6 @@
                                 </StackLayout>
                             </Frame>
                         </Grid>
-                       
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
