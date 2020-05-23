@@ -27,7 +27,8 @@
                         <Label Text="{Binding Item.Nombre}" FontAttributes="Bold" TextColor="White" FontSize="Title"></Label>
                         <Button x:Name="btn_Map"
                                 BackgroundColor="Transparent"
-                                Clicked="btn_Map_Clicked" Text="{Binding Item.Direccion}" TextColor="White" FontSize="Subtitle"></Button>
+                                Clicked="btn_Map_Clicked" 
+                                Text="{Binding Item.Direccion}" TextColor="White" FontSize="Subtitle"></Button>
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -35,7 +36,14 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Item.Telefono}" TextColor="White" FontSize="Subtitle"></Label>
-                            <Label Grid.Column="1" FontAttributes="Bold" HorizontalTextAlignment="End"  Text="{Binding Item.SitioWeb}" LineBreakMode="TailTruncation" TextColor="White" FontSize="Subtitle"></Label>
+                            <Button
+                                Command="{Binding OpenUrlCommand}"
+                                BackgroundColor="White"
+                                TextColor="Gray"
+                                HorizontalOptions="End"
+                                Grid.Column="1" FontAttributes="Bold"
+                                Text="Visitar web"
+                                FontSize="Subtitle"></Button>
                         </Grid>
                     </StackLayout>
                 </Grid>
