@@ -25,7 +25,9 @@
 
                     <StackLayout Grid.Row="1" VerticalOptions="End" Spacing="2" Margin="5,15">
                         <Label Text="{Binding Item.Nombre}" FontAttributes="Bold" TextColor="White" FontSize="Title"></Label>
-                        <Label Text="{Binding Item.Direccion}" TextColor="White" FontSize="Subtitle"></Label>
+                        <Button x:Name="btn_Map"
+                                BackgroundColor="Transparent"
+                                Clicked="btn_Map_Clicked" Text="{Binding Item.Direccion}" TextColor="White" FontSize="Subtitle"></Button>
 
                         <Grid>
                             <Grid.ColumnDefinitions>
