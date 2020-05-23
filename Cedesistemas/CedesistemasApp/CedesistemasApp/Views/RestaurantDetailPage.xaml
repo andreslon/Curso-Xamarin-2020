@@ -35,9 +35,18 @@
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Item.Telefono}" TextColor="White" FontSize="Subtitle"></Label>
+                            <Button ImageSource="phone" Grid.Column="0" 
+                                    FontAttributes="Bold" 
+                                    Command="{Binding CallCommand}"
+                                    CommandParameter="{Binding Item.Telefono}"
+                                    HeightRequest="40"
+                                    BackgroundColor="Transparent"
+                                    Text="{Binding Item.Telefono}" 
+                                    TextColor="White" 
+                                    FontSize="Subtitle"></Button>
                             <Button
                                 Command="{Binding OpenUrlCommand}"
+                                CommandParameter="{Binding Item.SitioWeb}"
                                 BackgroundColor="White"
                                 TextColor="Gray"
                                 HorizontalOptions="End"

@@ -10,6 +10,25 @@ namespace CedesistemasApp.Services
 {
     public class DeviceService : IDeviceService
     {
+        public void Call(string phone)
+        {
+            try
+            {
+                PhoneDialer.Open(phone);
+            }
+            catch (ArgumentNullException anEx)
+            {
+                // Number was null or white space
+            }
+            catch (FeatureNotSupportedException ex)
+            {
+                // Phone Dialer is not supported on this device.
+            }
+            catch (Exception ex)
+            {
+                // Other error has occurred.
+            }
+        } 
         public bool CheckConnectivity()
         {
             var current = Connectivity.NetworkAccess;
@@ -20,11 +39,14 @@ namespace CedesistemasApp.Services
                 return true;
             }
             return false;
+        } 
+        async public void OpenBrowser(string url)
+        {
+            var uri = new Uri(url);
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
 
-        public void OpenBrowser(string url)
-        {
-            throw new NotImplementedException();
-        }
+
+
     }
 }

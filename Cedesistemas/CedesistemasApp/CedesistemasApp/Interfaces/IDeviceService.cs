@@ -8,5 +8,6 @@ namespace CedesistemasApp.Interfaces
     {
         bool CheckConnectivity();
         void OpenBrowser(string url);
+        void Call(string phone);
     }
 }
