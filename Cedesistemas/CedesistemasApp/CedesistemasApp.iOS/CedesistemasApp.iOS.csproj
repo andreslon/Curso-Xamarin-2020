@@ -128,11 +128,17 @@
     <PackageReference Include="Xamarin.Forms.Maps">
       <Version>4.6.0.726</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>3.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.2.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CedesistemasApp\CedesistemasApp.csproj">
-      <Project>{20B5CFE5-8741-46FF-B696-D373E3052B25}</Project>
+      <Project>{AECB600F-102E-4F3F-B4D3-9096C6BC4D4D}</Project>
       <Name>CedesistemasApp</Name>
     </ProjectReference>
   </ItemGroup>
