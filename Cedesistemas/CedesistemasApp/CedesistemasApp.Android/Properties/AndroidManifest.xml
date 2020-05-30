@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.cedesistemasapp" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0.0" package="com.cedesistemas.andres" android:installLocation="auto" android:versionCode="1">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
-	<application android:label="CedesistemasApp.Android">
+	<application android:label="Cedesistemas 2020" android:icon="@mipmap/ic_launcher">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCGr084uGOQvshW9zE9ELLFzz3frSv2WHc" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<uses-library android:name="org.apache.http.legacy" android:required="true" />
