@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -93,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CedesistemasApp\CedesistemasApp.csproj">
-      <Project>{20B5CFE5-8741-46FF-B696-D373E3052B25}</Project>
+      <Project>{AECB600F-102E-4F3F-B4D3-9096C6BC4D4D}</Project>
       <Name>CedesistemasApp</Name>
     </ProjectReference>
   </ItemGroup>
