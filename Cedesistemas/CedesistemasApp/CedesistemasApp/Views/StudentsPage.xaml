@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CedesistemasApp.Views.StudentsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="50" Spacing="30">
+                <StackLayout>
+                    <Label  Text="Nombres" TextColor="Black"/>
+                    <Entry Placeholder="Nombres" Text="{Binding Student.Nombres}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label  Text="Apellidos" TextColor="Black"/>
+                    <Entry Placeholder="Apellidos" Text="{Binding Student.Apellidos}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label  Text="Cedula" TextColor="Black"/>
+                    <Entry Placeholder="Cedula" Text="{Binding Student.Cedula}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label  Text="Fecha de Nacimiento" TextColor="Black"/>
+                    <DatePicker Date="{Binding Student.FechaNacimiento}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label  Text="Email" TextColor="Black"/>
+                    <Entry Placeholder="Email" Keyboard="Email" Text="{Binding Student.Email}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label  Text="Teléfono" TextColor="Black"/>
+                    <Entry Placeholder="Teléfono" Keyboard="Telephone" Text="{Binding Student.Telefono}"/>
+                </StackLayout>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Guardar" Command="{Binding GuardarCommand}"/>
+                    <Button Grid.Column="1"  Text="Limpiar" Command="{Binding LimpiarCommand}"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

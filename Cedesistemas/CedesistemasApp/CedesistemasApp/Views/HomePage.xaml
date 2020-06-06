@@ -11,7 +11,7 @@
 
 
     <views:RestaurantsPage Title="Restaurantes"/>
-    <views:SettingsPage Title="Opciones"/>
+    <views:StudentsPage Title="Estudiantes"/>
     <views:AboutPage Title="Acerca"/>
 
 

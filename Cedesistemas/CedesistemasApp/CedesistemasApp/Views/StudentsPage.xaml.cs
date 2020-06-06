@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CedesistemasApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace CedesistemasApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : ContentPage
+    public partial class StudentsPage : ContentPage
     {
-        public SettingsPage()
+        public StudentsPage()
         {
             InitializeComponent();
+            BindingContext = new StudentsPageViewModel();
         }
     }
 }
