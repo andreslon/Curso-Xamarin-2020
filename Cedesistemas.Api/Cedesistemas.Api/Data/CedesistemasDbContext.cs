@@ -20,6 +20,7 @@ namespace Cedesistemas.Api.Data
         }
         public DbSet<Restaurante> Restaurante { get; set; }
         public DbSet<Producto> Producto { get; set; }
+        public DbSet<Estudiante> Estudiante { get; set; }
 
     }
 }
