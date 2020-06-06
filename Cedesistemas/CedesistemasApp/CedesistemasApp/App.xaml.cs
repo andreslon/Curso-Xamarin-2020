@@ -33,7 +33,7 @@ namespace CedesistemasApp
 
         protected override void OnResume()
         {
-            Crashes.GenerateTestCrash(); 
+            //Crashes.GenerateTestCrash(); 
         }
     }
 }

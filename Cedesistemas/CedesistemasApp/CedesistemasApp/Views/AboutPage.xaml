@@ -4,12 +4,29 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundColor="{StaticResource gris_claro_color}"
              x:Class="CedesistemasApp.Views.AboutPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20" >
+            <Grid   HorizontalOptions="Center" WidthRequest="200">
+                <Image x:Name="imagen" Source="icon" WidthRequest="200" HeightRequest="200"></Image>
+                <Grid VerticalOptions="End" HorizontalOptions="Start" BackgroundColor="#f1f1f1" Padding="5">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="camera" Tapped="camera_Tapped" />
+                    </Grid.GestureRecognizers>
+                    <Image Source="camera" WidthRequest="30" HeightRequest="30"></Image>
+                </Grid>
+                <Grid VerticalOptions="End" HorizontalOptions="End" BackgroundColor="#f1f1f1" Padding="5">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="photo" Tapped="photo_Tapped" />
+                    </Grid.GestureRecognizers>
+                    <Image Source="photo" WidthRequest="30" HeightRequest="30"></Image>
+                </Grid> 
+            </Grid>
+            <Label Text="Andrés Londoño" HorizontalOptions="Center" FontSize="26" />
+            <Button BackgroundColor="Transparent" Text="https://andreslon.com"  />
+            <Button BackgroundColor="Transparent" Text="andreslondono@cedesistemas.edu.co"/>
+            <Button BackgroundColor="Transparent"  Text="+573045678392"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
