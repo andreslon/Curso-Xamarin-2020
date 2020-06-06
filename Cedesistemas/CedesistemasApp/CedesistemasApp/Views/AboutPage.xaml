@@ -6,10 +6,16 @@
              mc:Ignorable="d"
              x:Class="CedesistemasApp.Views.AboutPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+            <Button 
+            x:Name="btnTomarFoto" 
+            Text="Tomar Foto"/>
+            <Button 
+            x:Name="btnSeleccionarFoto" 
+            Text="Seleccionar Foto"/>
+            <Image x:Name="Imagen"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
